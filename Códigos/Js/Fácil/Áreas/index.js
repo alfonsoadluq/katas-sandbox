@@ -20,7 +20,7 @@ function calculateArea(polygon) {
                 const height = parseFloat(prompt("Ingrese la altura del triángulo:"));
                 // Verificamos que ambos valores sean números no NaN y que sean del tipo 'number'
                 if (isNaN(base) || isNaN(height) || typeof base !== 'number' || typeof height !== 'number') {
-                    error = true;
+                    error = true; // Si se cumple alguna de las condiciones, marcamos el error como verdadero
                     alert("Base y altura deben ser números válidos.");
                 }
                 area = (base * height) / 2;
@@ -57,7 +57,7 @@ function calculateArea(polygon) {
             return area; 
             
     } catch (error) {
-        console.error("Error: " + error.message);
+        console.error("Error: " + error.message); // Capturamos cualquier error inesperado y lo mostramos en la consola
     }
 }
 
