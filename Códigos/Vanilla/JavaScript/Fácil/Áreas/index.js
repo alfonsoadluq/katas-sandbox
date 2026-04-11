@@ -6,16 +6,16 @@
  * - Imprime el cálculo del área de un polígono de cada tipo.
 */
 
-const PERMITTED_POLYGONS = ['triangulo', 'cuadrado', 'rectangulo'];
+const PERMITTED_POLYGONS = ['T', 'C', 'R']; // Array de polígonos permitidos para validar
 
 function calculateArea(polygon) {
-    const polygonLower = polygon.toLowerCase(); // Convertir a minúsculas para comparación
+    const polygonLower = polygon.toUpperCase(); // Convertir a mayúsculas para comparación
     let error = false; // Variable para controlar si hubo un error en la entrada de datos
     let area;
 
     try {
         switch (polygonLower) { //Usamos switch en lugar de if debido a que solamente se usa un solo parámetro para determinar el tipo de polígono
-            case 'triangulo':
+            case 'T':
                 const base = parseFloat(prompt("Ingrese la base del triángulo:")); // Convertimos el número a flotante para permitir decimales
                 const height = parseFloat(prompt("Ingrese la altura del triángulo:"));
                 // Verificamos que ambos valores sean números no NaN y que sean del tipo 'number'
@@ -26,7 +26,7 @@ function calculateArea(polygon) {
                 area = (base * height) / 2;
                 break;
 
-            case 'cuadrado':
+            case 'C':
                 const side = parseFloat(prompt("Ingrese el lado del cuadrado:")); // Convertimos el número a flotante para permitir decimales
                 if (isNaN(side) || typeof side !== 'number') {
                     error = true;
@@ -35,7 +35,7 @@ function calculateArea(polygon) {
                 area = side ** 2;
                 break;
 
-            case 'rectangulo':
+            case 'R':
                 const width = parseFloat(prompt("Ingrese la base del rectángulo:")); // Convertimos el número a flotante para permitir decimales
                 const length = parseFloat(prompt("Ingrese la altura del rectángulo:"));
                 if (isNaN(width) || isNaN(length) || typeof width !== 'number' || typeof length !== 'number') {
@@ -61,5 +61,5 @@ function calculateArea(polygon) {
     }
 }
 
-let polygonType = prompt("Ingrese un polígono para calcular su área (triángulo, cuadrado, rectángulo): ");
+let polygonType = prompt("Ingrese el tipo de polígono (T para Triángulo, C para Cuadrado, R para Rectángulo): ");
 calculateArea(polygonType);
