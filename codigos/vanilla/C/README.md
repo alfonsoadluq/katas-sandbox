@@ -1,6 +1,6 @@
-# Índice de ejercicios de JavaScript según dificultad
+# Índice de ejercicios de C según dificultad
 
-## [Fácil](facil/README.md)
-## [Medio](medio/README.md)
-## [Difícil](difícil/README.md)
-## [Reto](reto/README.md)
+### 1. [Fácil](facil/README.md)
+### 2. [Medio](medio/README.md)
+### 3. [Difícil](difícil/README.md)
+### 4. [Reto](reto/README.md)
