@@ -5,7 +5,7 @@ export class Skinwalker extends Animal {
 
   constructor(formaOculta) {
     super(formaOculta.especie, formaOculta.sonido);
-    this.#formaOculta = formaOculta;
+    this.formaOculta = formaOculta;
   }
 
   get formaOculta() {

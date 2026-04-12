@@ -5,7 +5,7 @@ export class Humano extends Animal {
 
   constructor(especie, sonido, nombre) {
     super(especie, sonido);
-    this.#nombre = nombre;
+    this.nombre = nombre;
   }
 
   get nombre() {
@@ -13,6 +13,9 @@ export class Humano extends Animal {
   }
 
   set nombre(nombre) {
+    if (typeof nombre !== "string") {
+      throw new Error("El nombre debe ser una cadena de texto");
+    }
     this.#nombre = nombre;
   }
 
