@@ -12,6 +12,7 @@ export class Animal {
     return this.#especie;
   }
 
+  // Setter con validación, sino no se puede crear un animal sin especie o con una especie no válida
   set especie(especie) {
     if (typeof especie !== "string") {
       throw new Error("La especie debe ser una cadena de texto");
