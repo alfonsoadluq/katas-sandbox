@@ -27,6 +27,6 @@ export class Perro extends Animal {
   }
 
   descripcion() {
-    return `${super.descripcion()}, ${this.nombre}, ${this.raza}`;
+    return `${super.descripcion()}, se llama ${this.nombre} y es de raza ${this.raza}`;
   }
 }
