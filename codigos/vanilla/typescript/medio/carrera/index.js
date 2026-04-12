@@ -1,3 +1,17 @@
+/*
+ * Crea una función que evalúe si un atleta supera una pista según sus acciones.
+ * 
+ * La funcion debe recibir un array con las acciones ("run"/"jump") y un string con la pista ("_" o "|").
+ * 
+ * Ejemplo:
+ * - `run` + `_` ➔ `_` (Correcto)
+ * - `jump` + `|` ➔ `|` (Correcto)
+ * - `run` + `|` ➔ `/` (Fallo: correr en valla)
+ * - `jump` + `_` ➔ `x` (Fallo: saltar en suelo)
+ * 
+ * Debe imprimir la pista final resultante y retornar `true` si la carrera fue perfecta o `false` si hubo fallos.
+*/
+
 function Race(athleteActions, raceTrack) {
     let finalSection = ""; // Aquí se mostrará la pista final después de evaluar las acciones del atleta
     let won = true; // Por defecto es true hasta que cometa un error

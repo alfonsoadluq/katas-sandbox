@@ -1,3 +1,12 @@
+/*
+ * Crea una función que sume 2 números y retorne su resultado pasados
+ * unos segundos.
+ * - Recibirá por parámetros los 2 números a sumar y los segundos que
+ *   debe tardar en finalizar su ejecución.
+ * - Deberá retornar el resultado de forma
+ *   asíncrona, es decir, sin detener la ejecución del programa principal.
+ */
+
 // Hacemos una promesa que se resuelve después de un tiempo determinado
 const delay = (seconds) => new Promise(resolve => setTimeout(resolve, seconds * 1000));
 
