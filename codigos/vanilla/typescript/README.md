@@ -5,7 +5,8 @@
 ### 3. [Difícil](difícil/README.md)
 ### 4. [Reto](reto/README.md)
 
-> [!NOTE] Para ejecutar TypeScript, es necesario tener instalado Node.js y TypeScript. 
+> [!NOTE] 
+> Para ejecutar TypeScript, es necesario tener instalado Node.js y TypeScript. 
 > [Instalar NodeJs](https://nodejs.org/es)
 > ````bash
 > npm install -g typescript
@@ -13,5 +14,5 @@
 > Luego, puedes compilar y ejecutar tus archivos `.ts` con los siguientes comandos:
 > ````bash
 > tsc nombre-del-archivo.ts
-> node nombre-del-archivo.js
+> node nombre-del-archivo.ts
 > ````
