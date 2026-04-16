@@ -7,6 +7,7 @@
 
 > [!NOTE] 
 > Para ejecutar TypeScript, es necesario tener instalado Node.js y TypeScript. 
+> 
 > [Instalar NodeJs](https://nodejs.org/es)
 > ````bash
 > npm install -g typescript

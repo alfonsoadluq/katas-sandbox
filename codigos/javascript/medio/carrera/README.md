@@ -18,3 +18,7 @@ La función debe recibir:
 > - La función debe retornar un string con el resultado de cada acción concatenado.
 > - El resultado de cada acción se determina por la combinación de la acción y el tipo de pista.
 > - El resultado final es una cadena que representa el desempeño del atleta en la pista. 
+
+
+## **Solución**
+[**Pulsa aquí**](index.js)

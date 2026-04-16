@@ -12,3 +12,6 @@ La función recibirá por parámetro sólo un polígono a la vez. Los polígonos
 >
 > - **Área del rectángulo:**  
 >   Área = base × altura
+
+## Solución
+[**Pulsa aquí**](index.js)

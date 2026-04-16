@@ -9,3 +9,6 @@ Crea una función que sume 2 números y retorne su resultado pasados unos segund
 > [!TIP] La función debe cumplir con las siguientes condiciones:
 > - Debe retornar el resultado de forma **asíncrona**  
 > - No debe detener la ejecución del programa principal  
+
+## **Solución**
+[**Pulsa aquí**](index.js)
