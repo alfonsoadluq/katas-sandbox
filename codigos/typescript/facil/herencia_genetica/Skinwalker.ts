@@ -3,33 +3,37 @@ import { Animal } from "./Animal.js";
 export class Skinwalker extends Animal {
   #formaOculta: Animal;
 
-  constructor(victima: Animal) {
-    if (!(victima instanceof Animal)) {
-      throw new Error(
-        "El Skinwalker necesita un Animal real para transformarse.",
-      );
-    }
+  constructor(formaOculta: Animal) {
+    Skinwalker.#validarVictima(formaOculta);
 
-    super(victima.especie, victima.sonido);
-
-    this.#formaOculta = victima;
+    super(formaOculta.especie, formaOculta.sonido);
+    this.#formaOculta = formaOculta;
   }
 
-  // Getter para ver a quién está imitando
-  get formaOculta() {
+  get formaOculta(): Animal {
     return this.#formaOculta;
   }
 
-  set formaOculta(formaOculta) {
-    if (!(formaOculta instanceof Animal)) {
-      throw new Error("La nueva forma debe ser un Animal válido.");
-    }
-    this.#formaOculta = formaOculta;
-    this.especie = formaOculta.especie;
-    this.sonido = formaOculta.sonido;
+  set formaOculta(nuevaForma: Animal) {
+    Skinwalker.#validarVictima(nuevaForma);
+
+    this.#formaOculta = nuevaForma;
+    this.especie = nuevaForma.especie;
+    this.sonido = nuevaForma.sonido;
   }
 
-  descripcion() {
-    return `${this.formaOculta.descripcion()}, ¡ES UN ${this.constructor.name.toUpperCase()}!`;
+  static #validarVictima(victima: any) {
+    if (!victima || typeof victima.descripcion !== "function") {
+      throw new Error(
+        "El Skinwalker necesita un Animal real para transformarse (debe tener el método descripción).",
+      );
+    }
+  }
+
+  descripcion(): string {
+    const imitacion = this.#formaOculta.descripcion();
+    const miNombre = (this.constructor as any).name.toUpperCase();
+
+    return `${imitacion}, ¡ES UN ${miNombre}! 💀`;
   }
 }

@@ -11,9 +11,9 @@
 > [Instalar NodeJs](https://nodejs.org/es)
 > ````bash
 > npm install -g typescript
+> npm install -g tsx
 > ````
 > Luego, puedes compilar y ejecutar tus archivos `.ts` con los siguientes comandos:
 > ````bash
-> tsc nombre-del-archivo.ts
-> node nombre-del-archivo.ts
+> tsx nombre-del-archivo.ts
 > ````
