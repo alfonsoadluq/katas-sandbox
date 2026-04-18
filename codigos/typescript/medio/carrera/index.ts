@@ -1,17 +1,15 @@
 function Race(athleteActions: string[], raceTrack: string): boolean {
-  let finalSection: string = ""; // Aquí se mostrará la pista final después de evaluar las acciones del atleta
-  let won: boolean = true; // Por defecto es true hasta que cometa un error
+  let finalSection: string = "";
+  let won: boolean = true;
 
-  // Definimos el tipo del objeto rules para que acepte cualquier string como clave y valor
   const rules: Record<string, string> = {
-    // Creamos un objeto para definir las reglas de combinación entre acciones y secciones de la pista
     "run_": "_",
     "jump|": "|",
     "run|": "/",
     "jump_": "x",
   };
 
-  const trackSections: string[] = [...raceTrack];  // Convertimos la pista en un array para facilitar la iteración
+  const trackSections: string[] = [...raceTrack];
 
   trackSections.forEach((section, index) => {
     const action: string = athleteActions[index]; // Obtenemos la acción correspondiente a cada sección de la pista
