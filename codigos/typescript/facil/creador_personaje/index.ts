@@ -1,3 +1,4 @@
+// Creamos un tipo para que el objeto character tenga una estructura definida
 type Character = {
   name: string;
   ability?: string;
@@ -5,9 +6,9 @@ type Character = {
 };
 
 const createCharacter = (character: Character) => {
-    const { name, ability = "Sin habilidades", weapon = "Espada" } = character;
+    const { name, ability = "Sin habilidades", weapon = "Espada" } = character; // Hacemos destructuring del objeto character y asignamos valores por defecto
     
-    if(ability !== "Sin habilidades"){
+    if(ability === null) {
         return `${name} tiene como habilidad ${ability} posee como arma ${weapon}`
     }
     return `${name} ${ability} y posee como arma ${weapon}`;
