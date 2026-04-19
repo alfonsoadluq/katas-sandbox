@@ -1,49 +1,31 @@
-type EmployeeBase = {
-    id: number;
-    name: string;
-    email: string;
-}
-
-type Developer = {
-    role: "developer";
-    languages: string[];
-}
-
-type Designer = {
-  role: "designer";
-  software: string[];
-};
-
-type FullDeveloper = EmployeeBase & Developer;
-type FullDesigner = EmployeeBase & Designer;
-
-type StaffMember = FullDeveloper | FullDesigner;
+import { StaffMember } from "./types.ts";
 
 const printStaffDetails = (staff: StaffMember): void => {
-    let actualRole = "";
-    let skills = ""
+  let actualRole = "";
+  let skills = "";
 
-    switch (staff.role) {
-      case "developer":
-        actualRole = "Desarrollador";
-        skills = staff.languages.join(",");
-        break;
+  switch (staff.role) {
+    case "developer":
+      actualRole = "Desarrollador";
+      skills = staff.languages.join(",");
+      break;
 
-      case "designer":
-        actualRole = "Diseñador";
-        skills = staff.software.join(",");
-        break;
+    case "designer":
+      actualRole = "Diseñador";
+      skills = staff.software.join(",");
+      break;
 
-      default:
-        console.log("Rol desconocido");
-        break;
-    }
+    default:
+      console.log("Rol desconocido");
+      break;
+  }
 
-    console.log(`ID:${staff.id}\nNombre:${staff.name}\nEmail:${staff.email}\nRol:${actualRole}\nSkills:${skills}`);
-}
+  console.log(
+    `ID:${staff.id}\nNombre:${staff.name}\nEmail:${staff.email}\nRol:${actualRole}\nSkills:${skills}`,
+  );
+};
 
-
-const myTeam: StaffMember[] = [
+const myTeam: StaffMember[] = [ // Aquí definimos el array que pertenece al tipo StaffMember
   {
     id: 1,
     name: "Alfonso",

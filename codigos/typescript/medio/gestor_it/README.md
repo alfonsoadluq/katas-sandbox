@@ -13,3 +13,26 @@ Estás creando el sistema de recursos humanos para una startup tecnológica. Tie
 
 * Crea un array de tipo `StaffMember[]` con al menos un desarrollador y un diseñador.
 Recorre el array pasándolos por tu función.
+
+### Datos de ejemplo para el array de empleados:
+````ts
+const myTeam: StaffMember[] = [
+  {
+    id: 1,
+    name: "Alfonso",
+    email: "alfonso@tech.com",
+    role: "developer",
+    languages: ["TypeScript", "JavaScript", "PHP"],
+  },
+  {
+    id: 2,
+    name: "Elena",
+    email: "elena@design.com",
+    role: "designer",
+    software: ["Figma", "Illustrator"],
+  },
+];
+````
+
+## **Solución**
+[**Pulse aquí**](index.ts)
