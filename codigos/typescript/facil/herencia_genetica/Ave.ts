@@ -1,4 +1,4 @@
-import { Animal } from "./Animal.ts";
+import { Animal } from "./Animal.js";
 
 export class Ave extends Animal {
   #puedeVolar: boolean;

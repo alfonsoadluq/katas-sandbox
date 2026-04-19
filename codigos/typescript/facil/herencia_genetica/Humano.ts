@@ -1,4 +1,4 @@
-import { Animal } from "./Animal.ts";
+import { Animal } from "./Animal.js";
 
 export class Humano extends Animal {
   #nombre: string;

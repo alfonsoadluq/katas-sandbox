@@ -1,4 +1,4 @@
-import { StaffMember } from "./types.ts";
+import { StaffMember } from "./types.js";
 
 const printStaffDetails = (staff: StaffMember): void => {
   let actualRole = "";
